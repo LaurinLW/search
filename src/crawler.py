@@ -19,7 +19,7 @@ HEADERS = {
 
 
 class Crawler:
-    def __init__(self, start_url, max_pages=1000, delay=0.5):
+    def __init__(self, start_url, max_pages=10000, delay=0.5):
         self.start_url = start_url
         self.max_pages = max_pages
         self.delay = delay
