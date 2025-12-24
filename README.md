@@ -1,8 +1,13 @@
 # Self written search engine
 
+## Goal
+- Index ~1 million Sites
+- Query them in under 1 second
+- Let this run on my virtual server (6 vCores, 8GB ram, 240GB storage) while also running other services
+
 ## Intitial Project Plan
 1. Simple Crawler
-2. BM25 Implementation
+2. BM25
 3. search over cli
 4. improve 1 & 2
 5. build ui

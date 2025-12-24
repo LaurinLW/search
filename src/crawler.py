@@ -19,7 +19,7 @@ HEADERS = {
 
 
 class Crawler:
-    def __init__(self, start_url, max_pages=10000, delay=0.5):
+    def __init__(self, start_url, max_pages=1000, delay=0.5):
         self.start_url = start_url
         self.max_pages = max_pages
         self.delay = delay
@@ -127,7 +127,7 @@ class Crawler:
             with self.lock:
                 self.pages[url] = {
                     "html": html,
-                    "title": soup.title.string if soup.title else "",
+                    "title": str(soup.title.string) if soup.title and soup.title.string else "",
                     "text": soup.get_text(separator=" ", strip=True),
                     "links": list(links),
                     "status_code": response.status_code,
